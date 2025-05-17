@@ -28,7 +28,35 @@ Route::get('blog', function () {
 
 Route::get('hello', [Link::class, 'helloWorld'] );
 
-Route::get('first', function () {
+Route::get('frontend', function () {
+	return view('frontend');
+});
+
+Route::get('pertemuan3', function () {
 	return view('first');
+});
+
+Route::get('pertemuan4', function () {
+	return view('Pertemuan4');
+});
+
+Route::get('tugaslinktree', function () {
+	return view('linktree');
+});
+
+Route::get('pertemuan7', function () {
+	return view('JS1');
+});
+
+Route::get('pertemuan7latihan', function () {
+	return view('js2');
+});
+
+Route::get('pertemuan8', function () {
+	return view('index_latihan');
+});
+
+Route::get('ETS', function () {
+	return view('index_ETS');
 });
 
