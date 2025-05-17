@@ -26,8 +26,8 @@
 
     <body>
         <div class="container">
-        <button class="btn btn-primary" onclick="hello();">Klik disini</button>  
-        </div>        
+        <button class="btn btn-primary" onclick="hello();">Klik disini</button>
+        </div>
         <p>
             Bilangan 1 :
             <input type="number" id="bil1" value="0" class="form-control">
