@@ -73,9 +73,11 @@ Route::get('/blog', [BlogController::class, 'home'] );
 Route::get('/blog/tentang', [BlogController::class, 'tentang'] );
 Route::get('/blog/kontak', [BlogController::class, 'kontak'] );
 
+//crud pegawai
 Route::get('/pegawai', [PegawaiController::class, 'index'] );
 Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah'] );
 Route::get('/pegawai/store', [PegawaiController::class, 'store'] );
 Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit'] );
 Route::get('/pegawai/update', [PegawaiController::class, 'update'] );
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'] );
+Route::get('/pegawai/cari', [PegawaiController::class, 'cari'] );
