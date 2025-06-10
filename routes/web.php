@@ -5,6 +5,7 @@ use App\Http\Controllers\Link ;
 use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\Pegawai2Controller ;
 use App\Http\Controllers\BlogController ;
+use App\Http\Controllers\SituswebController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +82,12 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit'] );
 Route::get('/pegawai/update', [PegawaiController::class, 'update'] );
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'] );
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari'] );
+
+//crud situsweb
+Route::get('/situsweb', [SituswebController::class, 'index'] );
+Route::get('/situsweb/tambah', [SituswebController::class, 'tambah'] );
+Route::get('/situsweb/store', [SituswebController::class, 'store'] );
+Route::get('/situsweb/edit/{id}', [SituswebController::class, 'edit'] );
+Route::get('/situsweb/update', [SituswebController::class, 'update'] );
+Route::get('/situsweb/hapus/{id}', [SituswebController::class, 'hapus'] );
+Route::get('/situsweb/cari', [SituswebController::class, 'cari'] );
