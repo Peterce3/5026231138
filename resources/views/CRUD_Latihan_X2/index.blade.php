@@ -8,7 +8,7 @@
 			<th>Nama Lengkap</th>
 			<th>Divisi</th>
 			<th>Departemen</th>
-			<th>Action</th>
+			<th>Hapus</th>
 		</tr>
 		@foreach($karyawan as $p)
 		<tr>
