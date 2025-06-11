@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\Pegawai2Controller ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\SituswebController ;
+use App\Http\Controllers\KaryawanController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,3 +92,9 @@ Route::get('/situsweb/edit/{id}', [SituswebController::class, 'edit'] );
 Route::get('/situsweb/update', [SituswebController::class, 'update'] );
 Route::get('/situsweb/hapus/{id}', [SituswebController::class, 'hapus'] );
 Route::get('/situsweb/cari', [SituswebController::class, 'cari'] );
+
+//crud karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index'] );
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah'] );
+Route::get('/karyawan/store', [KaryawanController::class, 'store'] );
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus'] );
