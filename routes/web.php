@@ -7,6 +7,7 @@ use App\Http\Controllers\Pegawai2Controller ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\SituswebController ;
 use App\Http\Controllers\KaryawanController ;
+use App\Http\Controllers\KeranjangBelanjaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,3 +99,9 @@ Route::get('/karyawan', [KaryawanController::class, 'index'] );
 Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah'] );
 Route::get('/karyawan/store', [KaryawanController::class, 'store'] );
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus'] );
+
+// Keranjang Belanja routes
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
+Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'beli']);
+Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store']);
+Route::get('/keranjangbelanja/batal/{id}', [KeranjangBelanjaController::class, 'batal']);
