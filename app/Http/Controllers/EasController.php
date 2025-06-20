@@ -21,7 +21,7 @@ class EasController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('CRUD_Latihan_X2/tambah');
+		return view('eas/tambah');
 
 	}
 
@@ -29,26 +29,12 @@ class EasController extends Controller
 	public function store(Request $request)
 	{
 		// insert data ke table karyawan
-		DB::table('karyawan')->insert([
-            'kodepegawai' => $request->kodepegawai,
-			'namalengkap' => Str::upper($request->nama),
-			'divisi' => $request->divisi,
-			'departemen' => Str::of($request->departemen)->lower()
+		DB::table('nilai')->insert([
+			'nomorinduksiswa' => $request->nrp,
+			'nilaiangka' => $request->nilaiangka,
+			'sks' => $request->sks
 		]);
 		// alihkan halaman ke halaman karyawan
-		return redirect('/karyawan');
-
-	}
-
-	// method untuk hapus data karyawan
-	public function hapus($id)
-	{
-		// menghapus data karyawan berdasarkan id yang dipilih
-		DB::table('karyawan')
-        ->where('kodepegawai',$id)
-        ->delete();
-
-		// alihkan halaman ke halaman karyawan
-		return redirect('/karyawan');
+		return redirect('/eas');
 	}
 }

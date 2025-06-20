@@ -1,8 +1,8 @@
 @extends('template')
 
 @section('content')
-	<h3>Data Situs</h3>
-	<a href="/eas/tambah" class="btn btn-primary"> + Tambah Situs Baru</a>
+	<h3>Nilai Kuliah</h3>
+	<a href="/eas/tambah" class="btn btn-primary"> + Tambah Nilai Baru</a>
 	<br/>
 	<br/>
 	<table class="table table-striped">
@@ -12,6 +12,7 @@
 			<th>Nilai Angka</th>
 			<th>SKS</th>
 			<th>Nilai Huruf</th>
+            <th>Bobot</th>
 		</tr>
 		@foreach($nilai as $n)
 		<tr>
@@ -19,7 +20,20 @@
 			<td>{{ $n->nomorinduksiswa }}</td>
             <td>{{ $n->nilaiangka }}</td>
 			<td>{{ $n->sks}}</td>
-
+            <td>
+                @if ($n->nilaiangka<=40)
+                    D
+                @elseif ($n->nilaiangka<=60 && $n->nilaiangka>=41)
+                    C
+                @elseif ($n->nilaiangka<=80 && $n->nilaiangka>=61)
+                    B
+                @elseif ($n->nilaiangka>=81)
+                    A
+                @endif
+            </td>
+            <td>
+                {{ $n->nilaiangka * $n->sks}}
+            </td>
 		</tr>
 		@endforeach
 	</table>

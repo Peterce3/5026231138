@@ -109,3 +109,5 @@ Route::get('/keranjangbelanja/batal/{id}', [KeranjangBelanjaController::class, '
 
 // Eas routes
 Route::get('/eas', [EasController::class, 'index']);
+Route::get('/eas/tambah', [EasController::class, 'tambah'] );
+Route::get('/eas/store', [EasController::class, 'store']);
