@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\SituswebController ;
 use App\Http\Controllers\KaryawanController ;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\EasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,3 +106,6 @@ Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
 Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'beli']);
 Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store']);
 Route::get('/keranjangbelanja/batal/{id}', [KeranjangBelanjaController::class, 'batal']);
+
+// Eas routes
+Route::get('/eas', [EasController::class, 'index']);
